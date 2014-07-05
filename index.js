@@ -105,7 +105,7 @@ var EasyXml = function() {
                     } else {
                         throw new Error(key + "contained non_string_attribute");
                     }
-                } else if (child === null) {
+                } else if (child === null || child === undefined) {
                     el.text = ""
                 } else if (typeof child === 'object' && child.constructor && child.constructor.name && child.constructor.name === 'Date') {
                     // Date
